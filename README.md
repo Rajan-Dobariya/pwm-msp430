@@ -21,6 +21,11 @@ To control the speed of the motor by varying PWM based on the Keypad input using
 **Step 8**: An interrupt is triggered every time a keypad input is detected, and the display screen changes based on the interrupt to display the current duty cycle.
 
 
+## Description:
+
+To generate a PWM motor with varied speed, we are connecting a Keypad to control the speed of the motor. Also, an LCD display which shows the current speed of the motor based on the Keypad input. As multiple interfaces are used to achieve this, each module is programmed separately and are then combined together in the main program i.e., bottom-to-top approach is used.
+LCD display has an I2C communication module in it that helps to send the required data to be printed and reduces the pin connection and also complex programming. A 4x4 (4 Rows and 4 column) switch keypad is used and is programmed such that, when the number 0 is pressed, it gives the value 0 and 1-0-0 is considered as the highest value. This Keypad input is used as the input for the PWM’s duty cycle and controls the speed of the motor accordingly.
+
 
 ## Output
 
